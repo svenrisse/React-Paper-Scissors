@@ -2,53 +2,69 @@ let won = 0;
 let lost = 0;
 let drawn = 0;
 
+/* Function to let computer choose a random option out of "rock" "paper" or "scissors" */
+
 function computerPlay() {
     let options = ["rock","paper","scissors"];
     let randomOption = options[Math.floor(Math.random() * options.length )];
     return randomOption;
 }
 
+/* function to play 1 round and return the result of that round played */
+
 function playRound(playerSelection, computerSelection) {
-    /* Rock */
-    if (playerSelection == "rock" && computerSelection == "rock") {
-        drawn++;
-        return ("Draw! You both have chosen Rock!") ;
-    } else if (playerSelection == "rock" && computerSelection == "paper") {
-        lost++;
-        return "You Lost! Paper beats Rock!";
-    } else if (playerSelection == "rock" && computerSelection == "scissors") {
-        won++;
-        return "You won! Rock beats Scissors!";
+    
+    if (playerSelection === "rock") {
+        switch(computerSelection) {
+            case "rock":
+                drawn++;
+                return "Draw! You both have chosen Rock!";
+            case "paper":
+                lost++;
+                return "Lost! Paper beats Rock!";
+            case "scissors":
+                won++;
+                return "Won! Rock beats Scissors!";
+        }
     }
-    /* Paper */
-    if (playerSelection == "paper" && computerSelection == "paper") {
-        drawn++;
-        return "Draw! You both have chosen Paper!"; 
-    } else if (playerSelection == "paper" && computerSelection == "scissors") {
-        lost++;
-        return "You lost! Scissors beats Paper!";
-    } else if (playerSelection == "paper" && computerSelection == "rock") {
-        won++;
-        return "You won! Paper beats Rock!";
+    if (playerSelection === "paper") {
+        switch(computerSelection) {
+            case "paper":
+                drawn++;
+                return "Drawn! You both have chosen Paper!";
+            case "scissors":
+                lost++;
+                return "Lost! Scissors beats Paper!";
+            case "rock":
+                won++;
+                return "Won! Paper beats rock!";
+        }
     }
-    /*Scissors*/
-    if (playerSelection == "scissors" && computerSelection == "scissors") {
-        drawn++;
-        return "Draw! You both have chosen Scissors!";
-    } else if (playerSelection == "scissors" && computerSelection == "rock") {
-        lost++;
-        return "You lost! Rock beats Scissors";
-    } else if (playerSelection == "scissors" && computerSelection == "paper") {
-        won++;
-        return "You won! Scissors beats Paper!";
+    if (playerSelection === "scissors") {
+        switch(computerSelection) {
+            case "scissors":
+                drawn++;
+                return "Drawn! You both have chosen Scissors!";
+            case "rock":
+                lost++;
+                return "Lost! Rock beats scissors!";
+            case "paper":
+                won++;
+                return "Won! Scissors beats Paper!";
+        }
     }
 }
+
+/* function to get player input and put it into lower case */
 
 function playerInput() {
     let input = prompt("What do you play?");
     let playerSelection = input.toLowerCase();
     return playerSelection;
 }
+
+/* function to play 5 rounds and print the result */
+
 function game() {
     for (let i = 0; i < 5; i++) {
         let playerSelection = playerInput();
