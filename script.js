@@ -10,6 +10,22 @@ function computerPlay() {
     return randomOption;
 }
 
+/* Buttons */
+
+const rockbtn = document.querySelector("#rock");
+rockbtn.addEventListener("click", () => {
+    playRound("rock",computerPlay());
+})
+const paperbtn = document.querySelector("#paper");
+paperbtn.addEventListener("click", () => {
+    playRound("paper",computerPlay());
+})
+
+const scissorsbtn = document.querySelector("#scissors");
+scissorsbtn.addEventListener("click", () => {
+    playRound("scissors",computerPlay());
+})
+
 /* function to play 1 round and return the result of that round played */
 
 function playRound(playerSelection, computerSelection) {
@@ -18,39 +34,48 @@ function playRound(playerSelection, computerSelection) {
         switch(computerSelection) {
             case "rock":
                 drawn++;
-                return "Draw! You both have chosen Rock!";
+                console.log("Draw! You both have chosen Rock!");
+                break; 
             case "paper":
                 lost++;
-                return "Lost! Paper beats Rock!";
+                console.log("Lost! Paper beats Rock!");
+                break;
             case "scissors":
                 won++;
-                return "Won! Rock beats Scissors!";
+                console.log("Won! Rock beats Scissors!");
+                break;
         }
     }
     if (playerSelection === "paper") {
         switch(computerSelection) {
             case "paper":
                 drawn++;
-                return "Drawn! You both have chosen Paper!";
+                console.log("Drawn! You both have chosen Paper!");
+                break;
             case "scissors":
                 lost++;
-                return "Lost! Scissors beats Paper!";
+                console.log("Lost! Scissors beats Paper!");
+                break;
             case "rock":
                 won++;
-                return "Won! Paper beats rock!";
+                console.log("Won! Paper beats rock!");
+                break;
         }
     }
     if (playerSelection === "scissors") {
         switch(computerSelection) {
             case "scissors":
                 drawn++;
-                return "Drawn! You both have chosen Scissors!";
+                console.log("Drawn! You both have chosen Scissors!");
+                break;
             case "rock":
                 lost++;
-                return "Lost! Rock beats scissors!";
+                console.log("Lost! Rock beats scissors!");
+                break;
             case "paper":
                 won++;
-                return "Won! Scissors beats Paper!";
+                console.log("Won! Scissors beats Paper!");
+                break;
         }
     }
 }
