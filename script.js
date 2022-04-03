@@ -39,10 +39,12 @@ function playRound(playerSelection, computerSelection) {
             case "paper":
                 lost++;
                 document.getElementById("result").innerHTML = "Lost! Rock loses to Paper!";
+                document.getElementById("computerScore").innerHTML = "Computer Score: " + lost;
                 break;
             case "scissors":
                 won++;
                 document.getElementById("result").innerHTML = "Won! Rock beats Scissors!";
+                document.getElementById("playerScore").innerHTML = "Player Score: " + won;
                 break;
         }
     }
@@ -55,10 +57,12 @@ function playRound(playerSelection, computerSelection) {
             case "scissors":
                 lost++;
                 document.getElementById("result").innerHTML = "Lost! Paper loses to Scissors!";
+                document.getElementById("computerScore").innerHTML = "Computer Score: " + lost;
                 break;
             case "rock":
                 won++;
                 document.getElementById("result").innerHTML = "Won! Paper beats Rock!";
+                document.getElementById("playerScore").innerHTML = "Player Score: " + won;
                 break;
         }
     }
@@ -71,12 +75,31 @@ function playRound(playerSelection, computerSelection) {
             case "rock":
                 lost++;
                 document.getElementById("result").innerHTML = "Lost! Scissors lose to Rock!";
+                document.getElementById("computerScore").innerHTML = "Computer Score: " + lost;
                 break;
             case "paper":
                 won++;
                 document.getElementById("result").innerHTML = "Won! Scissors beats Paper!";
+                document.getElementById("playerScore").innerHTML = "Player Score: " + won;
                 break;
         }
+    }
+
+    /* Quit game and announce winner after either party reaches a score of 5 */
+
+    if (won >= 5) {
+        alert("You won! Click OK to play another round!");
+        won = 0;
+        lost = 0;
+        document.getElementById("computerScore").innerHTML = "Computer Score: " + lost;
+        document.getElementById("playerScore").innerHTML = "Player Score: " + won;
+        
+    } else if (lost >= 5) {
+        alert("You lost! Click OK to play another round!");
+        won = 0;
+        lost = 0;
+        document.getElementById("computerScore").innerHTML = "Computer Score: " + lost;
+        document.getElementById("playerScore").innerHTML = "Player Score: " + won;
     }
 }
 
