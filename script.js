@@ -4,4 +4,6 @@ function computerPlay() {
     return randomOption;
 }
 
-console.log(computerPlay());
+function playRound(playerSelection, computerSelection) {
+    
+}
