@@ -34,15 +34,15 @@ function playRound(playerSelection, computerSelection) {
         switch(computerSelection) {
             case "rock":
                 drawn++;
-                console.log("Draw! You both have chosen Rock!");
+                document.getElementById("result").innerHTML = "Draw! You both have chosen Rock!";
                 break; 
             case "paper":
                 lost++;
-                console.log("Lost! Paper beats Rock!");
+                document.getElementById("result").innerHTML = "Lost! Rock loses to Paper!";
                 break;
             case "scissors":
                 won++;
-                console.log("Won! Rock beats Scissors!");
+                document.getElementById("result").innerHTML = "Won! Rock beats Scissors!";
                 break;
         }
     }
@@ -50,15 +50,15 @@ function playRound(playerSelection, computerSelection) {
         switch(computerSelection) {
             case "paper":
                 drawn++;
-                console.log("Drawn! You both have chosen Paper!");
+                document.getElementById("result").innerHTML = "Drawn! You both have chosen Paper!";
                 break;
             case "scissors":
                 lost++;
-                console.log("Lost! Scissors beats Paper!");
+                document.getElementById("result").innerHTML = "Lost! Paper loses to Scissors!";
                 break;
             case "rock":
                 won++;
-                console.log("Won! Paper beats rock!");
+                document.getElementById("result").innerHTML = "Won! Paper beats Rock!";
                 break;
         }
     }
@@ -66,19 +66,21 @@ function playRound(playerSelection, computerSelection) {
         switch(computerSelection) {
             case "scissors":
                 drawn++;
-                console.log("Drawn! You both have chosen Scissors!");
+                document.getElementById("result").innerHTML = "Drawn! You both have chosen Scissors!";
                 break;
             case "rock":
                 lost++;
-                console.log("Lost! Rock beats scissors!");
+                document.getElementById("result").innerHTML = "Lost! Scissors lose to Rock!";
                 break;
             case "paper":
                 won++;
-                console.log("Won! Scissors beats Paper!");
+                document.getElementById("result").innerHTML = "Won! Scissors beats Paper!";
                 break;
         }
     }
 }
+
+
 
 
 
