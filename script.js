@@ -55,32 +55,8 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-/* function to get player input and put it into lower case */
 
-function playerInput() {
-    let input = prompt("What do you play?");
-    let playerSelection = input.toLowerCase();
-    return playerSelection;
-}
 
-/* function to play 5 rounds and print the result */
 
-function game() {
-    for (let i = 0; i < 5; i++) {
-        let playerSelection = playerInput();
-        let computerSelection = computerPlay();
 
-        console.log(playRound(playerSelection,computerSelection));
-    }
 
-    if (won > lost) {
-        console.log("You won the game with a score of: " + won + ":" + lost + " , " + drawn + " rounds were drawn");
-    } else if (won > lost) {
-        console.log("You lost the game with a score of: " + lost + ":" + won + " , " + drawn + " rounds were drawn");
-    } else {
-        console.log("The game was drawn!");
-    }
-    
-}
-
-game();
