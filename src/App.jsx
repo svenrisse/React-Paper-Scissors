@@ -5,7 +5,6 @@ function App() {
   const [playerChoice, setPlayerChoice] = useState(null);
 
   function handlePlayerButton(value) {
-    console.log(value)
     setPlayerChoice(value);
   }
 
