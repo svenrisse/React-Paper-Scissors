@@ -1,6 +1,6 @@
-import rock from "./assets/rock.png";
-import paper from "./assets/paper.png";
-import scissors from "./assets/scissors.png";
+import rock from "../assets/rock.png";
+import paper from "../assets/paper.png";
+import scissors from "../assets/scissors.png";
 
 function Playerbuttons(props) {
 

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Playerbuttons from './Playerbuttons';
+import Playerbuttons from './components/Playerbuttons';
 
 function App() {
   const [playerChoice, setPlayerChoice] = useState(null);
