@@ -1,18 +1,21 @@
-import { useState } from "react"
+import { useState } from 'react'
 
-export default function App() {
+function App() {
 
   const [playerChoice, setPlayerChoice] = useState(null);
 
-  function handleClick(choice) {
-    setPlayerChoice(choice)
+  function handlePlayerButton(value) {
+    setPlayerChoice(value);
   }
-  console.log(playerChoice)
+
+
   return (
     <div>
-      <button onClick={() => handleClick("rock")}>Rock</button>
-      <button onClick={() => handleClick("paper")}>Paper</button>
-      <button onClick={() => handleClick("scissors")}>Scissors</button>
+      <button onClick={handlePlayerButton("rock")}>Rock</button>
+      <button onClick={handlePlayerButton("rock")}>Rock</button>
+      <button onClick={handlePlayerButton("rock")}>Rock</button>
     </div>
   )
 }
+
+export default App
