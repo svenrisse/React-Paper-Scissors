@@ -1,19 +1,20 @@
 import { useState } from 'react'
+import Playerbutton from './Playerbutton';
 
 function App() {
-
   const [playerChoice, setPlayerChoice] = useState(null);
 
   function handlePlayerButton(value) {
+    console.log(value)
     setPlayerChoice(value);
   }
 
 
   return (
     <div>
-      <button onClick={handlePlayerButton("rock")}>Rock</button>
-      <button onClick={handlePlayerButton("rock")}>Rock</button>
-      <button onClick={handlePlayerButton("rock")}>Rock</button>
+      <Playerbutton choice="Rock" handleClick={handlePlayerButton}/>
+      <Playerbutton choice="Paper" handleClick={handlePlayerButton}/>
+      <Playerbutton choice="Scissors" handleClick={handlePlayerButton}/>
     </div>
   )
 }
