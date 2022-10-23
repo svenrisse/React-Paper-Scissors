@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Playerbuttons from "./components/Playerbuttons";
+import Computersymbol from "./components/Computersymbol";
 
 function App() {
   const [playerChoice, setPlayerChoice] = useState(null);
@@ -61,10 +62,10 @@ function App() {
   return (
     <div className="app-container">
       <h1>Rock Paper Scissors</h1>
-      <div className="app-computer_choice">Computer Choice : {computerChoice}</div>
-      <div className="app-score">Won: {score.won} Lost: {score.lost}</div>
+      <Computersymbol computerSymbol={computerChoice}/>
       <div className="app-score_message">{score.message}</div>
       <Playerbuttons handleClick={handlePlayerButton} />
+      <div className="app-score">Won: {score.won} Lost: {score.lost}</div>
     </div>
   );
 }

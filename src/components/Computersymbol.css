@@ -1,0 +1,16 @@
+.app-computer_choice {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.app-computer_choice img {
+    margin-left: 3vw;
+    height: 5vh;
+    width: 3vw;
+}
+
+@media only screen and (max-width: 600px) {
+    .app-computer_choice img {
+        width: 10vw;
+    }
+}
