@@ -1,0 +1,38 @@
+.symbol-container {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+}
+
+img {
+    height: 15vh;  
+    width: 10vw;
+}
+
+.symbol {
+    height: 25vh;
+    width: 15vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+}
+
+#rock:hover {
+    background-color: #fca5a5;
+}
+#rock:active {
+    background-color: #fecaca;
+}
+#paper:hover {
+    background-color: #86efac;
+}
+#paper:active {
+    background-color: #bbf7d0;
+}
+#scissors:hover {
+    background-color: #a5b4fc;
+}
+#scissors:active {
+    background-color: #c7d2fe;
+}
