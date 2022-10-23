@@ -7,7 +7,7 @@ function App() {
   const [score, setScore] = useState({
     won: 0,
     lost: 0,
-    drawn: 0,
+    message: "Choose your symbol!"
   });
 
   function handlePlayerButton(value) {
@@ -29,7 +29,8 @@ function App() {
         setScore(prevScore => {
           return {
             ...prevScore,
-            won: prevScore.won + 1
+            won: prevScore.won + 1,
+            message: `${playerChoice} beats ${computerChoice}. You won!`
           }
         })
         break
@@ -39,7 +40,7 @@ function App() {
         setScore(prevScore => {
           return {
             ...prevScore,
-            drawn: prevScore.drawn + 1
+            message: `You both chose ${playerChoice}. It's a draw!`
           }
         })
         break
@@ -49,7 +50,8 @@ function App() {
         setScore(prevScore => {
           return {
             ...prevScore,
-            lost: prevScore.lost + 1
+            lost: prevScore.lost + 1,
+            message: `${playerChoice} loses against ${computerChoice}. You lost!`
           }
         })
         break
@@ -58,12 +60,11 @@ function App() {
 
   return (
     <div className="app-container">
+      <h1>Rock Paper Scissors</h1>
+      <div className="app-computer_choice">Computer Choice : {computerChoice}</div>
+      <div className="app-score">Won: {score.won} Lost: {score.lost}</div>
+      <div className="app-score_message">{score.message}</div>
       <Playerbuttons handleClick={handlePlayerButton} />
-      <div>Player choice : {playerChoice}</div>
-      <div>Computer Choice : {computerChoice}</div>
-      <div>Won: {score.won} </div>
-      <div>Lost: {score.lost} </div>
-      <div>Drawn: {score.drawn} </div>
     </div>
   );
 }
