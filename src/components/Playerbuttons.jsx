@@ -6,14 +6,14 @@ import "./Playerbuttons.css";
 function Playerbuttons(props) {
   return (
     <div className="symbol-container">
-      <div className="symbol" id="rock">
-        <img src={rock} onClick={() => props.handleClick("rock")}></img>
+      <div className="symbol" id="rock" onClick={() => props.handleClick("Rock")}>
+        <img src={rock}></img>
       </div>
-      <div className="symbol" id="paper">
-        <img src={paper} onClick={() => props.handleClick("paper")}></img>
+      <div className="symbol" id="paper" onClick={() => props.handleClick("Paper")}>
+        <img src={paper}></img>
       </div>
-      <div className="symbol" id="scissors">
-        <img src={scissors} onClick={() => props.handleClick("scissors")}></img>
+      <div className="symbol" id="scissors" onClick={() => props.handleClick("Scissors")}>
+        <img src={scissors}></img>
       </div>
     </div>
   );
