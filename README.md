@@ -1,4 +1,4 @@
-Rock Paper Scissors
+Rock Paper Scissors Game, my first React.js project
 
 Tools:
 - React JS
