@@ -4,4 +4,4 @@ Tools:
 - React JS
 - Vite
 
-Check it out: https://amazing-peony-fa0821.netlify.app/
+Check it out on [Vercel](https://react-paper-scissors-two.vercel.app/)
